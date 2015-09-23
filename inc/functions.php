@@ -3,7 +3,7 @@
 /*
  * Get posts
  */
-function pwppr_posts( $instance ){
+function get_pwppr_posts( $instance ){
     //echo '<pre>'.print_r($instance,1).'</pre>';
     // no needed wp_parse_args with defaults here. $instance is ok
     $args = array(
@@ -17,7 +17,7 @@ function pwppr_posts( $instance ){
 
     $theQuery = new WP_Query( $args );
 
-    echo '<div class="pwppr-list">';
+    $echo = '<div class="pwppr-list">';
     if ( $theQuery->have_posts() ) {
         while ( $theQuery->have_posts() ) {
             $theQuery->the_post();
@@ -94,7 +94,7 @@ function pwppr_posts( $instance ){
                              . '</div>';
 
 
-            echo '<div class="pwppr-item" 
+            $echo .= '<div class="pwppr-item" 
                        style="width:'.$instance['thumbW'].'px;
                               height:'.$instance['thumbH'].'px;
                               margin:'.$instance['itemMargin'].'px;">' 
@@ -106,33 +106,8 @@ function pwppr_posts( $instance ){
 
         } //while
     } //if
-    echo '</div>';
+    $echo .= '</div>';
+
+    return $echo;
 }
-
-
-
-/*
- * Ajax handler
- */
-function pwppr_ajax_handler() {
-
-    if ((isset($_POST['flag'])) && ($_POST['flag'] == "pwpprPostRefreshFlag")){
-
-        $wdgt_num = $_POST['number'];
-
-        $pwppr_ajax = new PWP_Photoroulette_Widget;
-        $options = get_option($pwppr_ajax->option_name);
-        $options = $options[ $wdgt_num ];
-
-        if ( ! empty($_POST['numPosts']) )
-            $options['items2show'] = $_POST['numPosts'];
-
-        pwppr_posts ( $options );
-
-        die();
-    }
-}
-// Add the handler to init()
-add_action('init', 'pwppr_ajax_handler');
-
 

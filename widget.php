@@ -56,7 +56,7 @@ class PWP_Photoroulette_Widget extends WP_Widget {
         echo '<div id="my-'.$this->id.'">';
             // updated container
             echo '<div class="pwppr-posts-container">';
-            pwppr_posts( $instance ); 
+            echo get_pwppr_posts( $instance ); 
             echo '</div>';
             ?>
 
@@ -73,18 +73,17 @@ class PWP_Photoroulette_Widget extends WP_Widget {
             // operation container
             echo '<div class="pwpprRefreshCont" style="background-image:url('.PWPPR_HOME_URL.'images/spin-'.$instance['colorScheme'].'.gif);">
                       <div class="userInputCont" style="border: 2px solid '.$this->colorSchemes[ $instance['colorScheme'] ].'">
-                        <input name="userNumPosts" class="userNumPosts" type="text"  
-                             onClick="this.select();"
-                             onkeyup="pwpprPostRefresh('.$this->number.'); return(false);" 
+                      <input name="userNumPosts" class="userNumPosts" type="text"  
+                             data-idnumber="'.$this->number.'"
                              title="'.__('Enter posts count', 'pwppr').'"
                              value="'.$instance['items2show'].'" />
                              </div>
                       <div class="ajaxSpinBtn" 
-                           onclick="pwpprPostRefresh('.$this->number.'); return(false);" 
-                           ></div>
+                             data-idnumber="'.$this->number.'"
+                             ></div>
                       <div class="ajaxSquareBtn"
-                           onclick="pwpprPostRefresh('.$this->number.'); return(false);" 
-                           ><span>'.$instance['buttonText'].'</span></div>
+                             data-idnumber="'.$this->number.'"
+                             ><span>'.$instance['buttonText'].'</span></div>
                   </div>';
 
         echo '</div>'; //my-pwppr-xx

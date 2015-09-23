@@ -3,7 +3,7 @@
 Plugin Name: PWP-Photoroulette
 Plugin URI: http://photoroulette.pwpcode.ru 
 Description: Simple way to increase pageviews of your site.
-Version: 1.0.9
+Version: 1.1.0
 Author: Polkan
 Author URI: http://pwpcode.ru
 */

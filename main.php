@@ -22,8 +22,11 @@ class PWP_Photoroulette {
      */
     public function enqueue_scripts() {
         // styles
+        wp_enqueue_style('thickbox');
         wp_enqueue_style( 'pwppr-styles',     PWPPR_HOME_URL . 'css/style.css',      array(), PWPPR_VER );
         // scripts
+        wp_enqueue_script('media-upload');
+        wp_enqueue_script('thickbox');
         wp_enqueue_script( 'pwppr-scripts',   PWPPR_HOME_URL . 'js/scripts.js',  array('jquery'), PWPPR_VER, true );
     }
 

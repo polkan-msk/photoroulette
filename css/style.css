@@ -51,9 +51,9 @@ input[type="text"].userNumPosts:hover{
 .ajaxSquareBtn{
     font-family: Helvetica,Arial,sans-serif;
     font-size: 16px;
-    display: block;
+    display: table;
     width: 77px;
-    height: 35px;
+    height: 15px;
     line-height: 35px;
     position: absolute;
     right: 0;
@@ -63,6 +63,11 @@ input[type="text"].userNumPosts:hover{
     text-shadow: 0 0 2px #000;
     font-weight: bold;
     cursor: pointer;
+}
+.ajaxSquareBtn > span{
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
 }
 .pwppr-list{
     width: 100%;

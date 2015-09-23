@@ -1,0 +1,11 @@
+.large-tax-box {
+    max-height: 150px;
+    overflow: auto !important;
+    border: 1px solid #dddddd;
+    border-right: 0;
+    padding: 0 0 0 10px;
+}
+.large-tax-box ul ul {
+    padding-left: 20px;
+    padding-top: 7px;
+}

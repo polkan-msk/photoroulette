@@ -22,6 +22,9 @@ Plugin has 5 predefined color schemes, allows to select categories to get posts 
 
 == Changelog ==
 
+= 1.1.0 =
+* Use nonse in ajax call
+
 = 1.0.5 =
 * PWP Photoroulette
 

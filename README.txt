@@ -20,6 +20,12 @@ Plugin has 5 predefined color schemes, allows to select categories to get posts 
 2. Activate the plugin.
 3. Add Photoroulette widget to sidebar.
 
+== Screenshots ==
+
+1. Four random posts with margin
+2. Two random posts limited by category, without margin
+3. Widget settings
+
 == Changelog ==
 
 = 1.1.0 =

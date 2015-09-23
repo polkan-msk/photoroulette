@@ -45,4 +45,8 @@ class PWP_Photoroulette {
         require_once( PWPPR_HOME_DIR . 'inc/functions.php' );
     }
 
+    /*
+     * TODO Shortcode support goes here
+     */
+
 }

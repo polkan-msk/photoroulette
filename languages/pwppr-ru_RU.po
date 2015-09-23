@@ -1,10 +1,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PhotoRoulette\n"
-"POT-Creation-Date: 2015-09-22 19:08+0300\n"
-"PO-Revision-Date: 2015-09-22 19:08+0300\n"
+"POT-Creation-Date: 2015-09-22 19:05+0300\n"
+"PO-Revision-Date: 2015-09-22 19:05+0300\n"
 "Last-Translator: Polkan <pwpcode@gmail.com>\n"
-"Language-Team: \n"
+"Language-Team: pwpcode <pwpcode@gmailcom>\n"
+"Language: Russian\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -17,80 +18,80 @@ msgstr ""
 
 #: ../widget.php:17 ../widget.php:26
 msgid "PhotoRoulette"
-msgstr ""
+msgstr "ФотоРулетка"
 
 #: ../widget.php:18
 msgid "Increase the pageviews of your site!"
-msgstr ""
+msgstr "Повышает количество просмотров страниц сайта!"
 
 #: ../widget.php:79
 msgid "Enter posts count"
-msgstr ""
+msgstr "Задайте количество"
 
 #: ../widget.php:130
 msgid "Title:"
-msgstr ""
+msgstr "Название:"
 
 #: ../widget.php:135
 msgid "Number of posts to show:"
-msgstr ""
+msgstr "Количество постов:"
 
 #: ../widget.php:136
 msgid "maximum is "
-msgstr ""
+msgstr "максимум"
 
 #: ../widget.php:141
 msgid "Show post titles"
-msgstr ""
+msgstr "Показывать заголовки"
 
 #: ../widget.php:145
 msgid "Thumbnail size:"
-msgstr ""
+msgstr "Размер изображений:"
 
 #: ../widget.php:146
 msgid "with margin"
-msgstr ""
+msgstr "с отступом"
 
 #: ../widget.php:150
 msgid "Color scheme:"
-msgstr ""
+msgstr "Цветовая схема"
 
 #: ../widget.php:161
 msgid "Button Title:"
-msgstr ""
+msgstr "Надпись на кнопке:"
 
 #: ../widget.php:166
 msgid "Use:"
-msgstr ""
+msgstr "Использовать:"
 
 #: ../widget.php:167
 msgid "Random image from post attachments"
-msgstr ""
+msgstr "Случайное изображение из атачментов поста"
 
 #: ../widget.php:168
 msgid "First image from post attachments"
-msgstr ""
+msgstr "Первое изображение из атачментов поста"
 
 #: ../widget.php:169
 msgid "Random image from post content"
-msgstr ""
+msgstr "Случайное изображение из контента поста"
 
 #: ../widget.php:170
 msgid "First image from post content"
-msgstr ""
+msgstr "Первое изображение из контента поста"
 
 #: ../widget.php:174
 msgid "Default image <small>(when no image was found)</small>:"
-msgstr ""
+msgstr "Картинка-заглушка <small>(когда изображений не найдено)</small>"
 
 #: ../widget.php:175
 msgid "Upload"
-msgstr ""
+msgstr "Загрузить"
 
 #: ../widget.php:179
 msgid "Select categories:"
-msgstr ""
+msgstr "Выберите категории:"
 
 #: ../widget.php:180
 msgid "Select nothing to use them all"
-msgstr ""
+msgstr "Ничего не отмечайте, чтобы использовать все категории"

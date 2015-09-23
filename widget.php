@@ -58,16 +58,16 @@ class PWP_Photoroulette_Widget extends WP_Widget {
         ?>
 
         <?php
-        /*
         wp_localize_script( 'pwppr-scripts', 'pwppr_'.$this->number, array(
             'ajaxurl' => admin_url( 'admin-ajax.php' ),
             'nonce' => wp_create_nonce( 'pwppr_nonce' ),
-            'testtt' => $instance['title'],
+            'id' => $this->id,
+            'maxitems' => $this->maxitems,
+            'items2show' => $instance['items2show'],
         ) );
-        */
+
         ?>
-
-
+<?php /*
         <script type="text/javascript">
         function pwpprPostRefresh_<?php echo $this->number; ?>(){
             // user choise of num posts
@@ -97,22 +97,22 @@ class PWP_Photoroulette_Widget extends WP_Widget {
             });
         }
         </script>
-
+*/ ?>
 
         <?php
             echo '<div class="pwpprRefreshCont" style="background-image:url('.PWPPR_HOME_URL.'images/spin-'.$instance['colorScheme'].'.gif);">
                       <div class="userInputCont" style="border: 2px solid '.$this->colorSchemes[ $instance['colorScheme'] ].'">
                         <input name="userNumPosts" class="userNumPosts" type="text"  
                              onClick="this.select();"
-                             onkeyup="pwpprPostRefresh_'.$this->number.'(); return(false);" 
+                             onkeyup="pwpprPostRefresh('.$this->number.'); return(false);" 
                              title="'.__('Enter posts count', 'pwppr').'"
                              value="'.$instance['items2show'].'" />
                              </div>
                       <div class="ajaxSpinBtn" 
-                           onclick="pwpprPostRefresh_'.$this->number.'(); return(false);" 
+                           onclick="pwpprPostRefresh('.$this->number.'); return(false);" 
                            ></div>
                       <div class="ajaxSquareBtn"
-                           onclick="pwpprPostRefresh_'.$this->number.'(); return(false);" 
+                           onclick="pwpprPostRefresh('.$this->number.'); return(false);" 
                            >'.$instance['buttonText'].'</div>
                   </div>';
             /*echo '<div style="clear:both;text-align:center;margin-top:10px;">

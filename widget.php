@@ -60,8 +60,6 @@ class PWP_Photoroulette_Widget extends WP_Widget {
 
             <?php
             wp_localize_script( 'pwppr-scripts', 'pwppr_'.$this->number, array(
-                'ajaxurl' => admin_url( 'admin-ajax.php' ),
-                'nonce' => wp_create_nonce( 'pwppr_nonce' ),
                 'id' => $this->id,
                 'maxitems' => $this->maxitems,
                 'items2show' => $instance['items2show'],

@@ -14,7 +14,6 @@ function pwpprPostRefresh ( idnumber ){
     jQuery.ajax({
         type: "POST",
         url: "/index.php",
-        nonce: myvars.nonce,
         data: {
             flag: "pwpprPostRefreshFlag",
             numPosts: numPosts,

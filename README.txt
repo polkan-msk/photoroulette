@@ -12,8 +12,10 @@ The interactive random post loader activated by site visitors.
 == Description ==
 
 The interactive random post loader with thumbnails activated by site visitors. Being involved in process visitor makes more pageviews and stays longer!
+
 Plugin has 5 predefined color schemes, allows to select categories to get posts from. You can add several widgets simultaneously, each one has its own settings.
-Live preview: photoroulette.pwpcode.ru
+
+Live preview: http://photoroulette.pwpcode.ru
 
 == Installation ==
 

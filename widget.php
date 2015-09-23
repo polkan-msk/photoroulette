@@ -29,7 +29,7 @@ class PWP_Photoroulette_Widget extends WP_Widget {
             'thumbW' => 145,
             'thumbH' => 145,
             'itemMargin' => 2,
-            'imgSource' => 'attachedRand', // (attachedRand, attachedFirst, contentFirst)
+            'imgSource' => 'attachedRand', // (attachedRand, attachedFirst, contentRand, contentFirst)
             'defImage' => '',
             'colorScheme' => 'green', 
             'buttonText' => 'Spin!', 
@@ -104,6 +104,7 @@ class PWP_Photoroulette_Widget extends WP_Widget {
         $instance['itemMargin'] = absint( $new_instance['itemMargin'] );
         if ( $new_instance['imgSource']=='attachedRand' 
           || $new_instance['imgSource']=='attachedFirst'
+          || $new_instance['imgSource']=='contentRand'
           || $new_instance['imgSource']=='contentFirst') $instance['imgSource'] = $new_instance['imgSource'];
         else                                             $instance['imgSource'] = 'attachedRand';
         $instance['defImage'] = esc_url($new_instance['defImage']);
@@ -162,6 +163,7 @@ class PWP_Photoroulette_Widget extends WP_Widget {
         <?php _e( 'Use:', 'pwppr' ); ?><br>
         <label><input class="radio" type="radio" value="attachedRand" <?php checked( $imgSource, 'attachedRand' ); ?> name="<?php echo $this->get_field_name( 'imgSource' ); ?>" /><?php _e('Random image from post attachments','pwppr'); ?></label><br>
         <label><input class="radio" type="radio" value="attachedFirst" <?php checked( $imgSource, 'attachedFirst' ); ?> name="<?php echo $this->get_field_name( 'imgSource' ); ?>" /><?php _e('First image from post attachments','pwppr'); ?></label><br>
+        <label><input class="radio" type="radio" value="contentRand" <?php checked( $imgSource, 'contentRand' ); ?> name="<?php echo $this->get_field_name( 'imgSource' ); ?>" /><?php _e('Random image from post content','pwppr'); ?></label><br>
         <label><input class="radio" type="radio" value="contentFirst" <?php checked( $imgSource, 'contentFirst' ); ?> name="<?php echo $this->get_field_name( 'imgSource' ); ?>" /><?php _e('First image from post content','pwppr'); ?></label>
         </p>
 

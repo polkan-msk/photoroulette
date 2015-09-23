@@ -53,8 +53,8 @@ input[type="text"].userNumPosts:hover{
     font-size: 16px;
     display: table;
     width: 77px;
-    height: 15px;
-    line-height: 35px;
+    height: 35px;
+    line-height: 15px;
     position: absolute;
     right: 0;
     top: 15px;

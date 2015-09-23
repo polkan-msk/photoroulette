@@ -22,15 +22,24 @@ function pwppr_posts( $instance ){
         while ( $theQuery->have_posts() ) {
             $theQuery->the_post();
             
-            $post_id = get_the_ID();
+            global $post;
+                 
+            $post_id = $post->ID;
+            $post_title = $post->post_title;
             $post_link = get_permalink();
-            $post_title = get_the_title();
 
             // get image as defined in setings
             $img = '';
-            if ( $instance['imgSource'] == 'contentFirst' ){
-                $match_count = preg_match("|<img[^']*?src=\"([^']*?)\"[^']*?>|", get_the_content(), $matches);
-                $img = $matches[1];
+            if ( $instance['imgSource'] == 'contentFirst' || $instance['imgSource'] == 'contentRand' ){
+                preg_match_all("|<img[^']*?src=\"([^']*?)\"[^']*?>|", $post->post_content, $matches);
+                if ( is_array($matches[1]) && count($matches[1]) ){
+                    if ($instance['imgSource'] == 'contentFirst'){
+                        $img = $matches[1][0];
+                    }
+                    else{
+                        $img = $matches[1][array_rand($matches[1])];
+                    }
+                }
             }
             else {
                 // post attachments		 

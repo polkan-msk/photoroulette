@@ -1,4 +1,4 @@
-
+// refresh handler 
 function pwpprPostRefresh ( idnumber ){
 
     var myvars = window['pwppr_' + idnumber];

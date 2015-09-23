@@ -2,15 +2,15 @@
 // don't call file directly
 if ( !defined( 'ABSPATH' ) )
     exit;
-
+/*
+ * Widget class
+ */
 class PWP_Photoroulette_Widget extends WP_Widget {
 
     private $maxitems;
     private $colorSchemes;
     private $defaults;
-    /*
-     * Create options
-     */ 
+
     public function __construct() {
         parent::__construct(
             'pwppr',
@@ -52,22 +52,25 @@ class PWP_Photoroulette_Widget extends WP_Widget {
 
         $instance = wp_parse_args( (array) $instance, $this->defaults );
 
+        // main widget container
         echo '<div id="my-'.$this->id.'">';
+            // updated container
             echo '<div class="pwppr-posts-container">';
             pwppr_posts( $instance ); 
             echo '</div>';
             ?>
 
             <?php
+            // variables for js
             wp_localize_script( 'pwppr-scripts', 'pwppr_'.$this->number, array(
                 'id' => $this->id,
                 'maxitems' => $this->maxitems,
                 'items2show' => $instance['items2show'],
             ) );
-
             ?>
 
             <?php
+            // operation container
             echo '<div class="pwpprRefreshCont" style="background-image:url('.PWPPR_HOME_URL.'images/spin-'.$instance['colorScheme'].'.gif);">
                       <div class="userInputCont" style="border: 2px solid '.$this->colorSchemes[ $instance['colorScheme'] ].'">
                         <input name="userNumPosts" class="userNumPosts" type="text"  
@@ -217,6 +220,4 @@ class PWP_Photoroulette_Widget extends WP_Widget {
         echo '</ul>';
     }
 }
-
-
 add_action( 'widgets_init', create_function( '', 'return register_widget("PWP_Photoroulette_Widget");' ) );

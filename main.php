@@ -4,7 +4,7 @@ if ( !defined( 'ABSPATH' ) )
     exit;
 
 /*
- * Main plugin class (will use for non widget functions and operations)
+ * Main plugin class 
  */
 class PWP_Photoroulette {
 
@@ -14,8 +14,6 @@ class PWP_Photoroulette {
         add_action( 'admin_enqueue_scripts', array($this, 'enqueue_admin_scripts') );
         add_action( 'plugins_loaded', array( $this, 'includes' ), 1 );
     }
-
-
 
     /*
      * Enqueue scripts and styles

@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: PWP-Photoroulette
+Plugin Name: PhotoRoulette
 Plugin URI: http://photoroulette.pwpcode.ru 
 Description: Simple way to increase pageviews of your site.
 Version: 1.1.0

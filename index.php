@@ -3,11 +3,11 @@
 Plugin Name: PWP-Photoroulette
 Plugin URI: 
 Description: Simple way to increase pageviews of your site. Plugin adds funny interactive widget.
-Version: 1.0.8
+Version: 1.0.9
 Author: Polkan
 Author URI: http://woo-apishops.ru
 */
-define('PWPPR_VER', '1.0.8');
+define('PWPPR_VER', '1.0.9');
 define('PWPPR_DBG', false);
 
 // don't call file directly

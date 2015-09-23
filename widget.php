@@ -107,7 +107,7 @@ class PWP_Photoroulette_Widget extends WP_Widget {
         else                                             $instance['imgSource'] = 'attachedRand';
         $instance['defImage'] = esc_url($new_instance['defImage']);
         $instance['colorScheme'] = $new_instance['colorScheme'];
-        $instance['buttonText'] = esc_attr($new_instance['buttonText']);
+        $instance['buttonText'] = $new_instance['buttonText'];
         $instance['categories'] = $new_instance['categories'];
 
         return $instance;
@@ -151,10 +151,12 @@ class PWP_Photoroulette_Widget extends WP_Widget {
                 echo '<option value="'.$colorName.'" '.selected($colorScheme,$colorName).'>' . ucfirst($colorName) . '</option>';
             }
             ?>
-        </select>&nbsp;&nbsp;
+        </select>
+        </p>
 
+        <p>
         <?php _e( 'Button Title:', 'pwppr' ); ?>
-		<input id="<?php echo $this->get_field_id('buttonText'); ?>" name="<?php echo $this->get_field_name('buttonText'); ?>" type="text" value="<?php echo $buttonText; ?>" size ="10" />
+		<input id="<?php echo $this->get_field_id('buttonText'); ?>" name="<?php echo $this->get_field_name('buttonText'); ?>" type="text" value="<?php echo esc_attr($buttonText); ?>" size ="18" />
         </p>
 
         <p>

@@ -13,7 +13,8 @@ function pwpprPostRefresh ( idnumber ){
     jQuery('#my-'+myvars.id+' .pwpprRefreshCont').css("backgroundPosition", "right -128px");
     jQuery.ajax({
         type: "POST",
-        url: "index.php",
+        url: "/index.php",
+        nonce: myvars.nonce,
         data: {
             flag: "pwpprPostRefreshFlag",
             numPosts: numPosts,

@@ -1,0 +1,15 @@
+Documentation with screenshots: http://photoroulette.pwpcode.ru/documentation/
+
+Installation
+    1. Goto plugins installation page of your WordPress site
+    2. To install plugin from zip-file press button “Upload plugin” 
+    3. Select downloaded plugin file (pwppr.zip) and click “Install Now” button
+    4. When installation is finished click “Activate Plugin” link
+    5. Now plugin is installed, activated and ready to be added on site
+
+Usage
+    1. To add widget on site goto “widgets” control page
+    2. Drag and drop “PhotoRoulette” to widget area where you want to place it
+    3. All widget settings can be found here in just added block. 
+       After making a changes don’t forget to save them by pressing blue button “save”
+	4. You can add as many PhotoRoulette widgets as you need

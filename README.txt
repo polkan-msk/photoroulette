@@ -1,6 +1,6 @@
 === PhotoRoulette ===
 Contributors: polkan
-Tags: attraction, interactive, pageviews, popular, posts, random, responsive, sidebar, widget, thumbnail, random posts
+Tags: photo, photoblog, photo blog, attraction, interactive, pageviews, popular, posts, random, responsive, sidebar, widget, thumbnail, random posts
 Requires at least: 4.0
 Tested up to: 4.3.1
 Stable tag: trunk
